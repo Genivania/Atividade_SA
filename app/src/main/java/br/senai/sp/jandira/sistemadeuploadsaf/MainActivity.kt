@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
@@ -249,7 +250,11 @@ fun SinglePhotoPicker() {
                             response: Response<ApiResponse>
                         ) {
 //                            results = response.body()!!.
-                                Log.i("ds3m", "${response}: ")
+                            Toast.makeText(
+                                context,
+                                "${response.body()!!.mensagemStatus}",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
 
                         override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
