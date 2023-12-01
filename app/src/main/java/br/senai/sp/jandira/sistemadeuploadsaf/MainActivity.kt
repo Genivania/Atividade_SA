@@ -149,9 +149,10 @@ fun SinglePhotoPicker() {
                 shape = CircleShape,
             ) {
                 AsyncImage(
-                    model = uri ?: R.drawable.add_a_photo,
+                    model = uri ?: R.drawable.baseline_camera_alt_15,
                     contentDescription = null,
                     modifier = Modifier.fillMaxSize(),
+
                     contentScale = ContentScale.Crop
                 )
 
@@ -177,11 +178,7 @@ fun SinglePhotoPicker() {
                     onDispose { }
                 }
             }
-            Image(
-                painterResource(id = R.drawable.add_a_photo),
-                contentDescription = "",
-                modifier = Modifier.size(height = 32.dp, width = 32.dp)
-            )
+
         }
         Text(text = "$url")
         Column {
@@ -199,14 +196,14 @@ fun SinglePhotoPicker() {
                         painter = painterResource(id = R.drawable.baseline_email_24),
                         contentDescription = "Username",
                         modifier = Modifier,
-                        tint = Color(0, 215, 255)
+                        tint = Color(156, 39, 176, 255)
                     )
                 },
 
                 colors = TextFieldDefaults
                     .outlinedTextFieldColors(
-                        focusedBorderColor = Color(0, 215, 255),
-                        focusedLabelColor = Color(0, 215, 255)
+                        focusedBorderColor = Color(156, 39, 176, 255),
+                        focusedLabelColor = Color(156, 39, 176, 255)
                     )
             )
 
@@ -224,13 +221,13 @@ fun SinglePhotoPicker() {
                         painter = painterResource(id = R.drawable.baseline_lock_24),
                         contentDescription = "Username",
                         modifier = Modifier,
-                        tint = Color(0, 215, 255)
+                        tint = Color(156, 39, 176, 255)
                     )
                 },
                 colors = TextFieldDefaults
                     .outlinedTextFieldColors(
-                        focusedBorderColor = Color(0, 215, 255),
-                        focusedLabelColor = Color(0, 215, 255)
+                        focusedBorderColor = Color(156, 39, 176, 255),
+                        focusedLabelColor = Color(156, 39, 176, 255)
                     )
             )
             Spacer(modifier = Modifier.height(16.dp))
@@ -278,7 +275,7 @@ fun SinglePhotoPicker() {
                     .fillMaxWidth()
                     .height(54.dp),
                 shape = RoundedCornerShape(8.dp),
-                colors = ButtonDefaults.buttonColors(Color(0, 215, 255)),
+                colors = ButtonDefaults.buttonColors(Color(103, 58, 183, 255)),
 
             ) {
                 Text(text = "Cadastrar")
